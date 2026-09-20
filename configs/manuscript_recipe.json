@@ -1,0 +1,11 @@
+{
+  "status": "manuscript_reference_only_see_docs_REPRODUCIBILITY",
+  "dataset": {"name": "LLM-LAT/harmful-dataset", "revision": null, "start_index": 100, "end_index_exclusive": 140, "held_out_file_count": 8},
+  "reconstruction": {"samples_per_token": 50, "sample_temperature": 1.0, "top_p": 1.0, "sample_choices_per_request": 1, "sample_completion_policy": "exact", "prior_mode": "uniform_dirichlet_v1", "prior_strength": 2.0},
+  "controller": {"hidden_size": 1024, "input_projection_mode": "count_sketch", "count_sketch_hashes": 4, "input_hidden_normalization": "layernorm", "epochs": 10, "batch_size": 32, "learning_rate": 0.0003, "weight_decay": 0.0001, "seed": 42, "mixed_precision": true},
+  "gate": {"risk_gate_training": "runtime_soft", "risk_gate_mode": "soft", "threshold": 0.1, "soft_temperature": 0.05, "min_scale": 0.01, "warmup_tokens": 3, "checkpoint": null},
+  "generation": {"temperature": 0.0, "top_p": 1.0, "max_new_tokens": 80},
+  "speculative": {"min_base_streak": 2, "draft_tokens": 80, "risk_batch_size": 8},
+  "tokenizers": {"GLM-5": "zai-org/GLM-5", "Qwen3-32B": "Qwen/Qwen3-32B", "Kimi-K2.5": "moonshotai/Kimi-K2.5", "Gemini-3.5-Flash": "google/gemma-3-1b-pt"}
+}
+

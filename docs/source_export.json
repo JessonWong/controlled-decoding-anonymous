@@ -1,0 +1,38 @@
+{
+  "source_files": 139,
+  "anonymized_or_portability_adjusted": [
+    "GPTFuzz/run_gemini_google.py",
+    "GPTFuzz/run_glm5_openrouter.py",
+    "baselines/flip_attack/generate.py",
+    "baselines/logibreak/run_openrouter.py",
+    "baselines/openrouter_client.py",
+    "baselines/pair_attack/run_openrouter.py",
+    "inference_gemini.py",
+    "inference_gemini_sampled.py",
+    "inference_openrouter.py",
+    "scripts/prepare_gptfuzz_benchmark_first100.py",
+    "test/test_flip_attack.py",
+    "test/test_pre_logits_sampled_openrouter.py",
+    "test/test_verify_targeted_audit_lock.py",
+    "training/collect_outcome_regret_pairs.py",
+    "training/collect_target_only_action_pairs.py",
+    "training/pre_logits_gemini.py",
+    "training/pre_logits_sampled_openrouter.py"
+  ],
+  "excluded": [
+    "original Git history and remotes",
+    "credentials",
+    "logs",
+    "experiment outputs",
+    "model weights and tokenizer snapshots",
+    "benchmark corpora",
+    "cluster job scripts",
+    "manuscript sources",
+    "private notes"
+  ],
+  "method_changes": "No changes to the controller, reconstruction, gate, or training objectives.",
+  "release_helpers": [
+    "scripts/audit_release.py",
+    "scripts/recover_mc_counts.py"
+  ]
+}

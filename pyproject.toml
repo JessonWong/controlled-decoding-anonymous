@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "controlled-decoding"
+version = "0.1.0"
+description = "Anonymous research code for sample-based controlled decoding of black-box language models."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.3", "transformers>=4.43", "datasets>=2.20", "accelerate>=0.33",
+  "numpy>=1.26", "tqdm>=4.66", "matplotlib>=3.8", "safetensors>=0.4",
+  "huggingface-hub>=0.25", "tokenizers>=0.19", "Pillow>=10",
+]
+
+[project.optional-dependencies]
+api = ["google-genai>=1", "openai>=1", "boto3>=1.35"]
+analysis = ["scikit-learn>=1.5", "scipy>=1.11", "joblib>=1.3"]
+quantization = ["bitsandbytes>=0.43"]
+dev = ["pytest>=8", "build>=1"]
+
+# The installed helper package is prefix_risk. Research entrypoints are run
+# from this source checkout, as shown in README.md.
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+pythonpath = [".", "src", "training", "test"]
+addopts = "-ra"
+
